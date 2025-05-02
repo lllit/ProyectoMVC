@@ -56,7 +56,7 @@
         <aside class="main-sidebar hidden-print">
             <section class="sidebar">
                 <div class="user-panel">
-                    <div class="pull-left image"><img class="img-circle" src="https://s3.amazonaws.com/uifaces/faces/twitter/jsa/48.jpg" alt="User Image"></div>
+                    <div class="pull-left image"><img class="img-circle" src="https://i.pinimg.com/736x/20/fa/f4/20faf4e24857a8d273e9968be7cf9224.jpg" alt="User Image"></div>
                     <div class="pull-left info">
                         <p>John Doe</p>
                         <p class="designation">Frontend Developer</p>

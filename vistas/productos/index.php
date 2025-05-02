@@ -10,8 +10,7 @@
         </div>
         <div>
             <a class="btn btn-primary btn-flat" href="?c=producto&a=FormCrear"><i class="fa fa-lg fa-plus"></i></a>
-            <a class="btn btn-info btn-flat" href="#"><i class="fa fa-lg fa-refresh"></i></a>
-            <a class="btn btn-warning btn-flat" href="#"><i class="fa fa-lg fa-trash"></i></a>
+
         </div>
     </div>
     <div class="row">
@@ -41,7 +40,11 @@
                                     <td><?= $r->pro_pre ?></td>
                                     <td><?= $r->pro_cant ?></td>
                                     <td><?= $r->pro_img ?></td>
-                                    <td>Editar | Eliminar</td>
+                                    <td>
+                                        <a class="btn btn-info btn-flat" href="?c=producto&a=FormCrear&id=<?= $r->pro_id ?>"><i class="fa fa-lg fa-refresh"></i></a>
+
+                                        <a class="btn btn-warning btn-flat" href="#"><i class="fa fa-lg fa-trash"></i></a>
+                                    </td>
                                 </tr>
                             <?php endforeach; ?>
 

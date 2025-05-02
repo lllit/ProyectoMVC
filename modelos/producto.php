@@ -1,7 +1,6 @@
 <?php
 
 
-
 class Producto
 {
     private $pdo;
@@ -88,7 +87,6 @@ class Producto
             return $consulta->fetch(PDO::FETCH_OBJ);
         } catch (Exception $e) {
             die($e->getMessage());
-            
         }
     }
     public function Listar()
@@ -99,11 +97,11 @@ class Producto
             return $consulta->fetchAll(PDO::FETCH_OBJ);
         } catch (Exception $e) {
             die($e->getMessage());
-
         }
     }
 
-    public function Insertar(Producto $p){
+    public function Insertar(Producto $p)
+    {
         try {
             $consulta = "insert into productos(pro_nom, pro_mar,pro_cos,pro_pre,pro_cant) values (?,?,?,?,?);";
             $this->pdo->prepare($consulta)->execute(array(
@@ -113,11 +111,45 @@ class Producto
                 $p->getPro_pre(),
                 $p->getPro_cant()
             ));
-            
-
         } catch (Exception $e) {
             die($e->getMessage());
+        }
+    }
 
+    public function Obtener($id)
+    {
+        try {
+            $consulta = $this->pdo->prepare("select * from productos where pro_id=?;");
+            $consulta->execute(array($id));
+            $r = $consulta->fetch(PDO::FETCH_OBJ);
+            $p = new Producto();
+            $p->setPro_id($r->pro_id);
+            $p->setPro_nom($r->pro_nom);
+            $p->setPro_mar($r->pro_mar);
+            $p->setPro_cos($r->pro_cos);
+            $p->setPro_pre($r->pro_pre);
+            $p->setPro_cant($r->pro_cant);
+
+            return $p;
+        } catch (Exception $e) {
+            die($e->getMessage());
+        }
+    }
+
+    public function Actualizar(Producto $p)
+    {
+        try {
+            $consulta = "update productos set pro_nom=?,pro_mar=?,pro_cos=?,pro_pre=?, pro_cant=? where pro_id=?;";
+            $this->pdo->prepare($consulta)->execute(array(
+                $p->getPro_nom(),
+                $p->getPro_mar(),
+                $p->getPro_cos(),
+                $p->getPro_pre(),
+                $p->getPro_cant(),
+                $p->getPro_id(),
+            ));
+        } catch (Exception $e) {
+            die($e->getMessage());
         }
     }
 }
