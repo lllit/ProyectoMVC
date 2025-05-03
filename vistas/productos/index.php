@@ -43,7 +43,7 @@
                                     <td>
                                         <a class="btn btn-info btn-flat" href="?c=producto&a=FormCrear&id=<?= $r->pro_id ?>"><i class="fa fa-lg fa-refresh"></i></a>
 
-                                        <a class="btn btn-warning btn-flat" href="#"><i class="fa fa-lg fa-trash"></i></a>
+                                        <a class="btn btn-warning btn-flat" href="?c=producto&a=Borrar&id=<?= $r->pro_id ?>"><i class="fa fa-lg fa-trash"></i></a>
                                     </td>
                                 </tr>
                             <?php endforeach; ?>

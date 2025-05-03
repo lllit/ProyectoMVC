@@ -54,6 +54,12 @@ class ProductoControlador
 
   }
 
+  public function Borrar(){
+    $modelo = $this->modelo;
+    $this->modelo->Eliminar($_GET['id']);
+    
+    header("location:?c=producto");
+  }
 
 
 

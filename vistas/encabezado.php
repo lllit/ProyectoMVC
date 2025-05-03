@@ -68,9 +68,7 @@
                     <li class="treeview"><a href="#"><i class="fa fa-laptop"></i><span>Productos</span><i class="fa fa-angle-right"></i></a>
                         <ul class="treeview-menu">
                             <li><a href="?c=producto"><i class="fa fa-circle-o"></i> Listar</a></li>
-                            <li><a href="ui-font-awesome.html"><i class="fa fa-circle-o"></i> Font Icons</a></li>
-                            <li><a href="ui-cards.html"><i class="fa fa-circle-o"></i> Cards</a></li>
-                            <li><a href="widgets.html"><i class="fa fa-circle-o"></i> Widgets</a></li>
+                            
                         </ul>
                     </li>
                     <li><a href="charts.html"><i class="fa fa-pie-chart"></i><span>Charts</span></a></li>

@@ -152,4 +152,15 @@ class Producto
             die($e->getMessage());
         }
     }
+
+    public function Eliminar($id)
+    {
+        try {
+            $consulta = "delete from productos where pro_id=?;";
+            $this->pdo->prepare($consulta)->execute(array($id));
+        } catch (Exception $e) {
+            die($e->getMessage());
+        }
+    }
+
 }
